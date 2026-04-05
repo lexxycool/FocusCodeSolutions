@@ -51,8 +51,8 @@ class Solution {
         StringBuilder result = new StringBuilder();
 
         for(char chars: s.toCharArray()) {
-            String letter = String.valueOf(chars).toLowerCase();
-            if(result.length() > 0 && !String.valueOf(result.charAt(result.length() - 1)).equals(letter)) {
+            char letter = Character.toLowerCase(chars);
+            if(!result.isEmpty() && result.charAt(result.length() - 1) != letter) {
                 counter++;
             }
             result.append(letter);
